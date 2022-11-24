@@ -5,6 +5,10 @@ AllCops:
     - "Rakefile"
     - "node_modules/**/*"
     - "bin/bundle"
+    - "bin/rails"
+    - "bin/rake"
+    - "bin/setup"
+
 
   DisplayCopNames: true
 
