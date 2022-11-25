@@ -4,7 +4,7 @@ class CreateLikes < ActiveRecord::Migration[7.0]
       
       t.timestamps
     end
-    add_reference :user, :likes, index: true
-    add_reference :posts, :likes, index: true
+    add_reference :likes, :users, index: true
+    add_reference :likes, :posts, index: true
   end
 end
