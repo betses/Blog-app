@@ -1,9 +1,8 @@
 class PostController < ApplicationController
-  def update_post_counter
-    Post.increment!(:posts_counter)
+  def index
+    @users = User.all
   end
-
-  def recent_posts(_id)
-    Comment.find_by(posts_id: '1').limit(1).order(created_at: :desc)
+  def show
+    @users = User.first
   end
 end
