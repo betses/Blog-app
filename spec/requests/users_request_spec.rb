@@ -14,6 +14,6 @@ RSpec.describe 'Users', type: :request do
     it 'returns http success' do
       # get '/users/show'
       expect(response).to have_http_status(:success)
-    end 
+    end
   end
 end
