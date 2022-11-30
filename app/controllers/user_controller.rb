@@ -1,5 +1,9 @@
 class UserController < ApplicationController
-  def recent_posts
-    User.limit(3).order(created_at: :desc)
+  def index
+    @users = User.all
+  end
+
+  def show
+    @users = User.first
   end
 end
