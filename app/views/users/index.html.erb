@@ -1,4 +1,8 @@
-<% @users.each do |m| %>
- <%= link_to m.name, user_path(1) %>
- <div>This page will display list of users along with their photos</div>
-<%end%>
+<% content_for :title, "Blog App" %>
+<h1>Users#index</h1>
+
+<section class="users-container">
+  <% @users.each do |user| %>
+    <%= render "user", user: user %>
+  <% end %>
+</section>
