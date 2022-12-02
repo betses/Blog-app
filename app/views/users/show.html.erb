@@ -1,2 +1,15 @@
-<%= link_to "This is user detail page", user_posts_path(1) %>
-<div>This page will display user posts and etc</div>
+<section class="flex flex-col ">
+  <%= render "user", user: @user %>
+  <div class="flex justify-center">
+  <div class="bio border-2 border-blue-gray w-9/12 ">
+    <h3>Bio<h3>
+    <p><%= @user.bio %></p>
+  </div>
+  </div>
+
+  <% @posts.each do |post| %>
+    <%= link_to user_posts_path(@user.id) do %>
+      <%= render "posts/post", post: post %>
+    <% end %>
+  <% end %>
+  </section>
