@@ -1,7 +1,8 @@
 class CommentController < ApplicationController
   def index
-    @comments= Comment.all
+    @comments = Comment.all
   end
+
   def new
     @comment = Comment.new
   end
@@ -14,7 +15,7 @@ class CommentController < ApplicationController
       post_id: @post.id
     )
     @new_comment.post_id = @post.id
-    
+
     if @new_comment.save
       @new_comment.update_comments_counter
       redirect_to "/users/#{@post.user_id}/posts/#{@post.id}", notice: 'Success!'
