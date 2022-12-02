@@ -1,5 +1,7 @@
 <%= render "user_post", post: @post %>
 
+<%= render "like/add_like"%>
+
     <div class="user-post-comments mt-2">
       <h3 class="text-xl">
       <span class="underline decoration-wavy decoration-slate-500">Comments</span>
@@ -7,7 +9,7 @@
       <span class="text-blue-gray-600 underline decoration-red-400"><%="#{@post.id}"%> </span>
       </h3>
 <div class="post-comments mt-4 border-2 border-gray-500">
-  <% @post.comments.each do |comment| %>
+  <% @post.recent_comments.each do |comment| %>
     <div class="post-comment">
       <p>
         <span><strong><%= comment.users.name %>:</strong></span>
@@ -16,3 +18,8 @@
     </div>
   <% end %>
 <div>
+
+<h2 class="mt-2">Add a Comment for this post</h2>
+<%= button_tag '', class: 'mt-3 button button-text button-blue' do%>
+  <%= link_to 'Add Comment', new_user_post_comment_path(@user.id, @post.id) %>
+<% end %>

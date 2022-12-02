@@ -12,4 +12,6 @@
       <%= render "posts/post", post: post %>
     <% end %>
   <% end %>
+
+      <button type="button" class="mt-4"><%= link_to "add post", new_user_post_path(@user.id) %> </button>
   </section>
