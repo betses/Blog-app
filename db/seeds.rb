@@ -17,14 +17,14 @@
 #   ])
   
 # Post.create([
-#     {users_id: 1, title: 'Keep fighting the Empire', text: 'We are close to destroying the Death Star, all rebels come full out', comments_counter: 0, likes_counter: 0},
-#     {users_id: 1, title: 'StormTroppers Weakness', text: 'Hit them with blasters on the there chest plates, they will fall and hit the ground. In the air Ti-Fighters are fast but slow on corners.', comments_counter: 0, likes_counter: 0},
-#     {users_id: 1, title: 'Help is on the Way', text: 'The Empire is pressing but fear not we are sending a troop, the Millenium is on it\'s way with reinforcements', comments_counter: 0, likes_counter: 0},
-#     {users_id: 1, title: 'Aldhani Strike', text: 'The 80 Million credits stolen from the Empire, we got them where we want. We will help the refugees and keep fighting', comments_counter: 0, likes_counter: 0},
-#     {users_id: 7, title: 'Aldhani Strike', text: 'The 80 Million credits stolen from the Empire, we got them where we want. We will help the refugees and keep fighting', comments_counter: 0, likes_counter: 0},
-#     {users_id: 7, title: 'Keep fighting the Empire', text: 'We are close to destroying the Death Star, all rebels come full out', comments_counter: 0, likes_counter: 0},
-#     {users_id: 2, title: 'Keep fighting the Empire', text: 'We are close to destroying the Death Star, all rebels come full out', comments_counter: 0, likes_counter: 0},
-#     {users_id: 3, title: 'Keep fighting the Empire', text: 'We are close to destroying the Death Star, all rebels come full out', comments_counter: 0, likes_counter: 0}
+#     {user_id: 1, title: 'Keep fighting the Empire', text: 'We are close to destroying the Death Star, all rebels come full out', comments_counter: 0, likes_counter: 0},
+#     {user_id: 1, title: 'StormTroppers Weakness', text: 'Hit them with blasters on the there chest plates, they will fall and hit the ground. In the air Ti-Fighters are fast but slow on corners.', comments_counter: 0, likes_counter: 0},
+#     {user_id: 1, title: 'Help is on the Way', text: 'The Empire is pressing but fear not we are sending a troop, the Millenium is on it\'s way with reinforcements', comments_counter: 0, likes_counter: 0},
+#     {user_id: 1, title: 'Aldhani Strike', text: 'The 80 Million credits stolen from the Empire, we got them where we want. We will help the refugees and keep fighting', comments_counter: 0, likes_counter: 0},
+#     {user_id: 7, title: 'Aldhani Strike', text: 'The 80 Million credits stolen from the Empire, we got them where we want. We will help the refugees and keep fighting', comments_counter: 0, likes_counter: 0},
+#     {user_id: 7, title: 'Keep fighting the Empire', text: 'We are close to destroying the Death Star, all rebels come full out', comments_counter: 0, likes_counter: 0},
+#     {user_id: 2, title: 'Keep fighting the Empire', text: 'We are close to destroying the Death Star, all rebels come full out', comments_counter: 0, likes_counter: 0},
+#     {user_id: 3, title: 'Keep fighting the Empire', text: 'We are close to destroying the Death Star, all rebels come full out', comments_counter: 0, likes_counter: 0}
 #   ])
   
 #   Comment.create([
