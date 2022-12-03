@@ -1,0 +1,11 @@
+<%= link_to user_path(user.id) do %>
+  <li class="user ml-2 mt-4 flex justify-center gap-10">
+    <div class="user-image ml-10">
+      <%= image_tag user.photo, alt: "#{user.name}-avatar", class: 'w-36 h-36 object-cover object-center rounded-[50%]' %>
+    </div>
+    <div class="user-info w-4/6 border border-red flex justify-between px-5 py-10">
+      <h3 class="username text-2xl ml-2"><%= user.name %></h3>
+      <span class="mr-2 flex items-end">Number of posts: <%= user.posts_counter %></span>
+    </div>
+  </li>
+<% end %>

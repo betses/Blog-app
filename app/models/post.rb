@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
-  has_many :likes, foreign_key: 'post_id'
-  has_many :comments, foreign_key: 'post_id'
-  belongs_to :author, class_name: 'User'
+  has_many :likes, foreign_key: 'posts_id'
+  has_many :comments, foreign_key: 'posts_id'
+  belongs_to :users, class_name: 'User'
 
   validates :title, presence: true
   validates :title, length: { maximum: 250 }

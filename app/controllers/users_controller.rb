@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @users = User.first
+    @user = User.find(params[:id])
+    @posts = Post.where(users_id: params[:id])
   end
 end
