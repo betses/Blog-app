@@ -12,7 +12,6 @@ require 'webdrivers'
 # service = Selenium::WebDriver::Service.chrome(path: 'c:/WebDriver/bin/chromedriver')
 # driver = Selenium::WebDriver.for :chrome, service: service
 
-
 # require 'selenium-webdriver'
 # Selenium::WebDriver.for :chrome
 

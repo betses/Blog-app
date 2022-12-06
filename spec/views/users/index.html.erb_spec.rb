@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe 'users/index.html.erb', type: :feature do
   before :each do
-
     @user1 = User.create(name: 'Tomm', photo: 'https://www.w3schools.com/images/w3schools_green.jpg', bio: 'Mechanic',
                          posts_counter: 0)
   end
