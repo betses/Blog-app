@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # get '/user/:id', to: 'user#show', as: 'user'
   # get '/post/:user_id/posts', to: 'post#index', as: 'user_posts'
   # get '/post/:user_id/posts/:id', to: 'post#show', as: 'user_post'
-  root "users#index"
+  root 'users#index'
   resources :users, only: %i[show] do
     resources :posts, only: %i[index show new create] do
       resources :comment, only: %i[new index create]
