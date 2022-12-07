@@ -1,7 +1,4 @@
 <% content_for :title, "Blog App" %>
-<h1>Users#index</h1>
-
-<%= button_to "logout", destroy_user_session_path, data: {turbo: false}, method: :delete %>
 
 <section class="users-container">
   <% @users.each do |user| %>

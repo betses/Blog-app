@@ -3,17 +3,33 @@
   <head>
     <title>Project</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
-    
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= render "layouts/top_header" %>
   </head>
 
   <body>
-    <%= yield %>
+  <div class="flex justify-between items-center py-2 px-10 bg-gray-300">
+  <div>
+    <%= link_to 'HOME', root_path, class: 'mr-8' %>
+    <%= link_to 'BACK', 'javascript:history.back()' %>
+    </div>
+    
+    <% if current_user %>
+      <h2 class="">Welcome <%= current_user.name %></h2>
+      <%= button_to "Sign out", destroy_user_session_path, method: :delete,  data: {turbo: false}, class: " button button-gradient text-white bg-gray-500 border hover:text-gray-500 hover:border-gray-500 hover:bg-transparent", 'data-ripple-light': true %>
+    <% end %>
+    </div>
+    
+    <div class="notice"><%= notice %></div>
+    <div class="alert"><%= alert %></div>
+
+      <%= yield %>
+
   </body>
 </html>
