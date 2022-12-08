@@ -41,5 +41,4 @@ class CommentController < ApplicationController
     end
     redirect_to user_post_path(current_user.id, post.id)
   end
-  
 end
