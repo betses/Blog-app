@@ -24,12 +24,6 @@ class CommentController < ApplicationController
     end
   end
 
-  private
-
-  def comment_params
-    params.require(:comment).permit(:text)[:text]
-  end
-
   def destroy
     @comment = Comment.find(params[:comment_id])
     post = Post.find_by(id: @comment.post_id)
@@ -40,5 +34,11 @@ class CommentController < ApplicationController
       flash[:error] = 'Error: Comment could not be deleted'
     end
     redirect_to user_post_path(current_user.id, post.id)
+  end
+
+  private
+
+  def comment_params
+    params.require(:comment).permit(:text)[:text]
   end
 end
