@@ -16,16 +16,14 @@ Rails.application.routes.draw do
       resources :like, only: %i[create]
     end
   end
-# end
+  # end
 
-
-namespace :api do
-  namespace :v1 do
-    post 'users/sign_in' => 'users#login'
-    get 'posts' => 'posts#index'
-    get 'comments' => 'comments#index'
-    post 'comments/create' => 'comments#create'
+  namespace :api do
+    namespace :v1 do
+      post 'users/sign_in' => 'users#login'
+      get 'posts' => 'posts#index'
+      get 'comments' => 'comments#index'
+      post 'comments/create' => 'comments#create'
+    end
   end
-end
-
 end
